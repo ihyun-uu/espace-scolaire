@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Espace scolaire RP — portail collège et lycée">
+  <title>Espace Scolaire — Collège & Lycée</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loginView" class="login-page">
+    <div class="login-card">
+      <div class="school-mark">✦</div>
+      <p class="eyebrow">COLLÈGE • LYCÉE</p>
+      <h1>ESPACE SCOLAIRE</h1>
+      <p class="muted">Portail de l'établissement RP</p>
+
+      <form id="loginForm">
+        <label for="loginId">Identifiant</label>
+        <input id="loginId" name="loginId" autocomplete="username" placeholder="Votre identifiant" required>
+
+        <label for="loginPassword">Mot de passe</label>
+        <input id="loginPassword" name="loginPassword" type="password" autocomplete="current-password" placeholder="Votre mot de passe" required>
+
+        <button class="primary full" type="submit">Se connecter</button>
+      </form>
+
+      <p id="loginError" class="error" aria-live="polite"></p>
+
+      <div class="demo-box">
+        <strong>Comptes de démonstration</strong>
+        <span>élève : <code>eleve</code> / <code>1234</code></span>
+        <span>prof : <code>prof</code> / <code>1234</code></span>
+        <span>CPE : <code>cpe</code> / <code>1234</code></span>
+        <span>direction : <code>direction</code> / <code>1234</code></span>
+      </div>
+
+      <p class="tiny">V1 RP — ne pas utiliser de données personnelles réelles.</p>
+    </div>
+  </div>
+
+  <div id="appView" class="app hidden">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark">✦</div>
+        <div>
+          <strong>ESPACE<br>SCOLAIRE</strong>
+          <small>COLLÈGE • LYCÉE</small>
+        </div>
+      </div>
+
+      <div class="profile-mini">
+        <div id="avatar" class="avatar">E</div>
+        <div>
+          <strong id="userName">Utilisateur</strong>
+          <small id="userRole">Élève</small>
+        </div>
+      </div>
+
+      <nav id="navMenu" class="nav"></nav>
+
+      <button id="logoutBtn" class="logout">↪ Déconnexion</button>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">PORTAIL SCOLAIRE</p>
+          <h2 id="pageTitle">Accueil</h2>
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" title="Notifications">🔔</button>
+          <span id="today"></span>
+        </div>
+      </header>
+
+      <section id="content" class="content"></section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
